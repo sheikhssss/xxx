@@ -15,7 +15,10 @@ jobs:
           cmd /c Downloads.bat
 
       - name: Connect to LiteManager
-        run: cmd /c show.bat
+        run: |
+          cmd /c show.bat
+          # Optionally, you can add a command to pause or wait for user input if needed
+          pause
 
       - name: Time Counter
         run: cmd /c loop.bat
